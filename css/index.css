@@ -133,10 +133,7 @@ html {
   font-size: 62.5%;
 }
 .about-nav {
-  border-bottom: 4px solid #000;
-  background-color: #89C9E4;
-  margin: 0;
-  padding: 20px 0;
+  border-bottom: 4px solid #000000;
   display: flex;
   justify-content: space-around;
 }
@@ -144,6 +141,8 @@ html {
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  background-color: lightgrey;
+  padding: 20px 10px;
   width: 100%;
 }
 @media (min-width: 500px) {
@@ -210,16 +209,17 @@ html {
 footer {
   margin: 0 auto;
   width: 100%;
-  background: #000000;
 }
 footer h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 footer .footer-boxes {
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
+  padding: 30px 0 60px 0;
   max-width: 500px;
+  margin: 0 auto;
   width: 100%;
 }
 @media (min-width: 500px) {
@@ -232,11 +232,41 @@ footer .footer-boxes {
     max-width: 1024px;
     flex-direction: row;
     justify-content: space-between;
+    background: #000000;
+    color: white;
   }
+}
+footer .footer-boxes h2 {
+  margin-bottom: 20px;
 }
 footer .footer-boxes div {
   text-align: center;
   width: 100%;
+  margin-top: 25px;
+}
+@media (min-width: 800px) {
+  footer .footer-boxes div {
+    margin-top: 0;
+  }
+}
+footer .footer-boxes img {
+  background-color: white;
+  width: 15%;
+  margin: 0 5% 0 5%;
+}
+footer .footer-boxes address,
+footer .footer-boxes p {
+  font-size: 2rem;
+}
+footer .footer-boxes a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: black;
+}
+@media (min-width: 800px) {
+  footer .footer-boxes a {
+    color: white;
+  }
 }
 #top-section {
   background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 0%, rgba(18, 3, 5, 0.5) 72%, rgba(85, 65, 65, 0.8) 98%), url('../images/cover-pic.jpg');
@@ -253,7 +283,7 @@ footer .footer-boxes div {
   box-sizing: border-box;
 }
 #top-section p {
-  color: #89C9E4;
+  color: lightgrey;
   font-size: 60px;
   font-weight: bold;
 }
@@ -264,7 +294,7 @@ footer .footer-boxes div {
 }
 #top-section button {
   display: block;
-  background-color: #89C9E4;
+  background-color: lightgrey;
   width: 200px;
   height: 45px;
   font-size: 2rem;
@@ -279,7 +309,7 @@ footer .footer-boxes div {
 }
 #top-section button a:hover {
   background: black;
-  color: #89C9E4;
+  color: lightgrey;
 }
 #feature-section {
   width: 100%;
@@ -299,7 +329,7 @@ footer .footer-boxes div {
 }
 #feature-section .featurettes {
   margin: 50px;
-  background-color: #89C9E4;
+  background-color: lightgrey;
   width: 100%;
   height: auto;
   box-shadow: 0 10px 6px -6px black;
@@ -308,10 +338,14 @@ footer .footer-boxes div {
   font-size: 25px;
   padding: 20px;
 }
+body {
+  background-image: radial-gradient(lightblue, lightyellow, grey);
+}
 .about {
   margin: 0 auto;
   font-size: 2rem;
   max-width: 500px;
+  background-color: white;
 }
 @media (min-width: 500px) {
   .about {
@@ -349,7 +383,7 @@ footer .footer-boxes div {
   width: 100%;
 }
 .about .intro {
-  margin: 10px 0 10px 0;
+  margin: 0 0 10px 0;
 }
 @media (min-width: 500px) {
   .about .intro {
