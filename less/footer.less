@@ -1,0 +1,39 @@
+footer {
+    margin: 0 auto;
+    width: 100%;
+    background: @footer-background-color;
+
+    h2 {
+        font-size: 3rem;
+    }
+ 
+
+    .footer-boxes {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        max-width: @phone-max-width;
+        //border: 1px dashed black;
+        width: 100%;
+
+        @media @tablet {
+            max-width: @tablet-max-width;
+
+            @media @desktop {
+                max-width: @desktop-max-width;
+                flex-direction: row;
+                justify-content: space-between;
+
+            }
+        }
+
+        div {
+            text-align: center;
+            width: 100%;
+
+        }
+
+    }
+
+
+}

@@ -1,0 +1,474 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.about-nav {
+  border-bottom: 4px solid #000;
+  background-color: #89C9E4;
+  margin: 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.about-nav header {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .about-nav header {
+    max-width: 800px;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .about-nav header {
+    max-width: 1024px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.about-nav header h1 {
+  margin: 10px 0 10px 0;
+  text-align: center;
+  font-size: 4rem;
+}
+@media (min-width: 800px) {
+  .about-nav header h1 {
+    width: 50%;
+    text-align: left;
+  }
+}
+.about-nav header nav {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .about-nav header nav {
+    width: 50%;
+  }
+}
+.about-nav header ul {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  margin: 0 auto;
+  width: 100%;
+}
+.about-nav header ul li {
+  margin: 10px 0 10px 0;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .about-nav header ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .about-nav header ul {
+    justify-content: space-between;
+  }
+}
+.about-nav header a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+footer {
+  margin: 0 auto;
+  width: 100%;
+  background: #000000;
+}
+footer h2 {
+  font-size: 3rem;
+}
+footer .footer-boxes {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  footer .footer-boxes {
+    max-width: 800px;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  footer .footer-boxes {
+    max-width: 1024px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer .footer-boxes div {
+  text-align: center;
+  width: 100%;
+}
+#top-section {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 0%, rgba(18, 3, 5, 0.5) 72%, rgba(85, 65, 65, 0.8) 98%), url('../images/cover-pic.jpg');
+  width: 100%;
+  height: 800px;
+  margin-top: 0;
+  background-size: cover;
+}
+#top-section .top-container {
+  padding: 100px;
+  padding-left: 500px;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#top-section p {
+  color: #89C9E4;
+  font-size: 60px;
+  font-weight: bold;
+}
+#top-section h1 {
+  color: #000;
+  font-size: 75px;
+  font-weight: bold;
+}
+#top-section button {
+  display: block;
+  background-color: #89C9E4;
+  width: 200px;
+  height: 45px;
+  font-size: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 4px solid black;
+}
+#top-section button a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+#top-section button a:hover {
+  background: black;
+  color: #89C9E4;
+}
+#feature-section {
+  width: 100%;
+  height: 800px;
+}
+#feature-section h2 {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 30px;
+  padding-left: 500px;
+  border-bottom: 3px solid black;
+}
+#feature-section .features {
+  display: flex;
+  justify-content: space-evenly;
+}
+#feature-section .featurettes {
+  margin: 50px;
+  background-color: #89C9E4;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 6px -6px black;
+}
+#feature-section .featurettes p {
+  font-size: 25px;
+  padding: 20px;
+}
+.about {
+  margin: 0 auto;
+  font-size: 2rem;
+  max-width: 500px;
+}
+@media (min-width: 500px) {
+  .about {
+    max-width: 800px;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .about {
+    max-width: 1024px;
+  }
+}
+.about h1,
+.about h2,
+.about h3 {
+  text-align: center;
+  font-weight: bold;
+}
+.about h1 {
+  font-size: 4rem;
+}
+.about h2 {
+  font-size: 3.5rem;
+  padding: 5px 0 5px 0;
+  margin: 10px 0 10px 0;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+}
+.about h3 {
+  font-size: 3rem;
+}
+.about p {
+  padding: 10px 2% 10px 2%;
+}
+.about img {
+  width: 100%;
+}
+.about .intro {
+  margin: 10px 0 10px 0;
+}
+@media (min-width: 500px) {
+  .about .intro {
+    background-size: cover;
+    height: 500px;
+    background-image: linear-gradient(white, black), url("../images/room-3m9132_mMSQ-unsplash.jpg");
+    background-color: #000000;
+    background-blend-mode: screen;
+    margin: 0px;
+  }
+  .about .intro h1 {
+    color: black;
+    font-weight: bold;
+  }
+  .about .intro p {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 50px;
+    width: 50%;
+  }
+}
+.about .company {
+  margin: 10px 0 10px 0;
+  background: white;
+}
+.about .company img {
+  margin: 15px 0 15px 0;
+}
+@media (min-width: 500px) {
+  .about .company {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about .company h2 {
+    width: 100%;
+  }
+  .about .company img {
+    width: 48%;
+  }
+  .about .company p {
+    width: 48%;
+  }
+}
+.about .profiles {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  .about .profiles .roles {
+    background-size: cover;
+    background-image: url("../images/dil-F35EmcotWPY-unsplash.jpg");
+  }
+  .about .profiles .roles .individual {
+    margin: 20px 0 20px 0;
+    justify-content: space-around;
+  }
+  .about .profiles .roles:nth-of-type(2) {
+    background-image: url("../images/ui-developers.jpg");
+    background-blend-mode: screen;
+    background-color: #2f2e2e;
+  }
+  .about .profiles .roles:nth-of-type(3) {
+    background-image: url("../images/front-end.jpg");
+  }
+  .about .profiles .roles:nth-of-type(4) {
+    background-image: url("../images/backend.jpg");
+  }
+  .about .profiles .roles h3 {
+    color: gold;
+  }
+}
+.about .profiles img {
+  display: block;
+}
+.about .profiles .individual {
+  margin: 5px 0 5px 0;
+}
+@media (min-width: 500px) {
+  .about .profiles .individual {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .about .profiles .individual:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+  .about .profiles .individual img {
+    width: 50%;
+  }
+  .about .profiles .individual .blurb {
+    width: 50%;
+    margin: auto 0;
+  }
+  .about .profiles .individual .blurb p {
+    padding: 10px 4% 10px 4%;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .about .profiles .individual img {
+    width: 33%;
+  }
+  .about .profiles .individual .blurb {
+    width: 33%;
+  }
+}
+.about .profiles .blurb {
+  background: lightgrey;
+}
+.about .profiles .blurb h3 {
+  background: darkgrey;
+}
+@media (min-width: 800px) {
+  .about .profiles .blurb h3 {
+    color: black;
+  }
+}
+.about .profiles h3 {
+  padding: 10px 0 10px 0;
+}

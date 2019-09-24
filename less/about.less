@@ -1,0 +1,195 @@
+.about {
+    margin: 0 auto;
+    font-size: 2rem;
+    max-width: @phone-max-width;
+
+    @media @tablet {
+        max-width: @tablet-max-width;
+
+        @media @desktop {
+           max-width: @desktop-max-width;
+        }
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        //background: purple;
+        padding: 5px 0 5px 0;
+        margin: 10px 0 10px 0;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    p {
+        padding: 10px 2% 10px 2%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .intro {
+        margin: 10px 0 10px 0;
+
+        @media @tablet {
+            background-size: cover;
+            height: 500px;
+            background-image: linear-gradient(white, black), url("../images/room-3m9132_mMSQ-unsplash.jpg");
+            background-color: rgb(0, 0, 0);
+            background-blend-mode: screen;
+            margin: 0px;
+
+
+            h1 {
+                color: black;
+                font-weight: bold;
+            }
+
+            p {
+                color:black;
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 50px;
+                width: 50%;
+            }
+        }
+    }
+
+    .company {
+
+        margin: 10px 0 10px 0;
+        background: white;
+
+        img {
+            margin: 15px 0 15px 0;
+        }
+
+        @media @tablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h2 {
+                width: 100%;
+            }
+
+            img {
+                width: 48%;
+            }
+            p {
+                width: 48%;
+            }
+
+        }
+    }
+
+    .profiles {
+        display: flex;
+        flex-direction: column;
+        
+        @media @desktop {
+            .roles {
+
+                background-size: cover;
+                background-image: url("../images/dil-F35EmcotWPY-unsplash.jpg");
+
+                .individual {
+                    margin: 20px 0 20px 0;
+                    justify-content: space-around;
+                }
+                
+                &:nth-of-type(2) {
+                    background-image: url("../images/ui-developers.jpg");
+                    background-blend-mode: screen;
+                    background-color: rgb(47, 46, 46);
+                }
+
+                &:nth-of-type(3) {
+                    background-image: url("../images/front-end.jpg");
+                }
+
+                &:nth-of-type(4) {
+                    background-image: url("../images/backend.jpg");
+                }
+
+                h3 {
+                    color: gold;
+                }
+            }
+        }
+
+
+        img {
+            display: block;
+        }
+
+        .individual {
+            margin: 5px 0 5px 0;
+
+            @media @tablet {
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                
+                &:nth-of-type(even) {
+                    flex-direction: row-reverse;
+                }
+
+                img {
+                    width: 50%;
+                }
+
+                .blurb {
+                    width: 50%;
+                    margin: auto 0;
+
+                    p {
+                        padding: 10px 4% 10px 4%;
+                    }
+                }
+
+                @media @desktop {
+                    img {
+                        width: 33%;
+                    }
+
+                    .blurb {
+                        width: 33%;
+                    }
+
+                }
+            }
+        }
+
+        .blurb {
+            background: lightgrey;
+            //margin-top: 1rem; 
+
+            h3 {
+                background: darkgrey;
+
+                @media @desktop {
+                    color: black;
+                }
+            }
+        }
+
+        h3 {
+            padding: 10px 0 10px 0;
+        }
+    }
+}
