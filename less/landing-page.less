@@ -8,11 +8,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background: grey;
+        margin: 10px 0;
 
-        @media @tablet {   
-                    height: 500px;
-                    background-size: cover;
-                    background-image: url("../images/index-header.jpg");
+        @media @tablet {
+            margin: 0;   
+            height: 500px;
+            background-size: cover;
+            background-image: url("../images/index-header.jpg");
         }
 
         header {
@@ -21,6 +24,8 @@
             align-items: center;
             justify-content: center;
             width: 100%;
+            margin: 20px;
+            
 
             @media @tablet {
                 color: white;
@@ -29,10 +34,12 @@
 
             button {
                 .index-buttons;
+                border-color: black;
                 font-weight: bold;
 
                 @media @tablet {
                     color: white;
+                    border-color: white;
                 }
             }
         }
@@ -42,68 +49,107 @@
     .innovation-container {
         display: flex;
         align-items: center;
+        justify-content: center;
+        background: grey;
+        margin: 10px 0;
 
-        @media @tablet {   
+        @media @tablet {
+            margin: 0;   
             height: 400px;
             background-size: cover;
             background-image: url("../images/innovation.jpg");
+            justify-content: left;
         }
 
         .innovation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 20px;
+
             @media @tablet {
                 margin-left: 7%;
+                justify-content: left;
                 color: white;
                 width: 50%;
             }
 
             button {
                 .index-buttons;
+                border-color: black;
 
                 @media @tablet {
                     color: white;
+                    border-color: white;
                 }
             }
         }
     }
 
-    .product-container, .mobile-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(32, 32, 32);
-        height: 400px;
+    .product, .mobile-support {
+        background-color:grey;
+        margin: 20px 0;
 
-        .product, .mobile-support {
+        @media @tablet {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            
+
+            @media @desktop {
+                flex-direction: row;
+                flex-wrap: nowrap;
+
+
+            }
+        }
+
+        img {
+            display: none;
+            width: 100%;
+
             @media @tablet {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
 
+                @media @desktop {
+                    margin: 0;
+                    width: auto;
+                }
             }
 
-            img {
-                height: 400px;
-            }
 
-            .product-blurb-container, .mobile-blurb-container {
+        }
 
-                margin: 0 5% 0 5%;
-
-            }
+        .product-blurb-container, .mobile-blurb-container {
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
 
             button {
                 .index-buttons;
                 border-color: black;
             }
+
         }
 
-        .mobile-support {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-        
+
     }
+
+    .mobile-support {
+        @media @desktop {
+            flex-direction: row-reverse;
+        }
+    }
+        
 
     .testimonials {
         display: flex;
@@ -112,43 +158,43 @@
         background: @black;
 
         div {
-            width: 40%;
-            height: 600px;
+            width: 100%;
+            //height: 600px;
             background-size: cover;
             margin: 30px 0;
             border-radius: 10px;
+            
 
 
             p {
                 background: rgba(0, 0, 0, .75);
                 font-size: 3rem;
                 color: white;
-                margin: 0 5%;
+                margin: 90% 5% 10% 5%;
             }
 
             &:nth-child(1) {
-                background-image: url("../images/testimonial1.jpg");
-                p { margin-top: 90%; }
-                
+                background-image: url("../images/testimonial1.jpg");               
             }
 
             &:nth-child(2) {
                 background-image: url("../images/testimonial2.jpg");
-                p { margin-top: 90%; }
             }
 
             &:nth-child(3) {
                 background-image: url("../images/testimonial3.jpg");
-                p { 
-                    margin-top: 90%;
-                }
             }
 
             &:nth-child(4) {
                 background-image: url("../images/testimonial4.jpg");
                 p { 
                     margin-top: 10%;
+                    margin-bottom: 90%;
                 }
+            }
+
+            @media @desktop {
+                width: 40%;
             }
         }
     }
@@ -159,19 +205,22 @@
         justify-content: space-around;
         align-items: center;
         background: @grey;
-        height: 250px;
         color: white;
 
         .news-box {
             padding: 2%;
-            width: 45%;
-            height: 55%;
+            margin: 10px 0;
+            width: 95%;
             background: rgb(34, 11, 161);
 
              p {
                 &:hover {
                     cursor: pointer;
                 }
+            }
+
+            @media @desktop {
+                width: 45%;
             }
         }
 

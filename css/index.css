@@ -329,9 +329,12 @@ footer .footer-boxes a {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: grey;
+  margin: 10px 0;
 }
 @media (min-width: 500px) {
   .index .header-container {
+    margin: 0;
     height: 500px;
     background-size: cover;
     background-image: url("../images/index-header.jpg");
@@ -343,6 +346,7 @@ footer .footer-boxes a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin: 20px;
 }
 @media (min-width: 500px) {
   .index .header-container header {
@@ -355,6 +359,7 @@ footer .footer-boxes a {
   border: 1px solid white;
   border-radius: 20px;
   padding: 10px 20px;
+  border-color: black;
   font-weight: bold;
 }
 .index .header-container header button:hover {
@@ -364,22 +369,37 @@ footer .footer-boxes a {
 @media (min-width: 500px) {
   .index .header-container header button {
     color: white;
+    border-color: white;
   }
 }
 .index .innovation-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: grey;
+  margin: 10px 0;
 }
 @media (min-width: 500px) {
   .index .innovation-container {
+    margin: 0;
     height: 400px;
     background-size: cover;
     background-image: url("../images/innovation.jpg");
+    justify-content: left;
   }
+}
+.index .innovation-container .innovation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
 }
 @media (min-width: 500px) {
   .index .innovation-container .innovation {
     margin-left: 7%;
+    justify-content: left;
     color: white;
     width: 50%;
   }
@@ -389,6 +409,7 @@ footer .footer-boxes a {
   border: 1px solid white;
   border-radius: 20px;
   padding: 10px 20px;
+  border-color: black;
 }
 .index .innovation-container .innovation button:hover {
   cursor: pointer;
@@ -397,64 +418,83 @@ footer .footer-boxes a {
 @media (min-width: 500px) {
   .index .innovation-container .innovation button {
     color: white;
+    border-color: white;
   }
 }
-.index .product-container,
-.index .mobile-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #202020;
-  height: 400px;
+.index .product,
+.index .mobile-support {
+  background-color: grey;
+  margin: 20px 0;
 }
 @media (min-width: 500px) {
-  .index .product-container .product,
-  .index .mobile-container .product,
-  .index .product-container .mobile-support,
-  .index .mobile-container .mobile-support {
+  .index .product,
+  .index .mobile-support {
+    margin: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    width: 100%;
+    justify-content: center;
   }
 }
-.index .product-container .product img,
-.index .mobile-container .product img,
-.index .product-container .mobile-support img,
-.index .mobile-container .mobile-support img {
-  height: 400px;
+@media (min-width: 500px) and (min-width: 800px) {
+  .index .product,
+  .index .mobile-support {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
-.index .product-container .product .product-blurb-container,
-.index .mobile-container .product .product-blurb-container,
-.index .product-container .mobile-support .product-blurb-container,
-.index .mobile-container .mobile-support .product-blurb-container,
-.index .product-container .product .mobile-blurb-container,
-.index .mobile-container .product .mobile-blurb-container,
-.index .product-container .mobile-support .mobile-blurb-container,
-.index .mobile-container .mobile-support .mobile-blurb-container {
-  margin: 0 5% 0 5%;
+.index .product img,
+.index .mobile-support img {
+  display: none;
+  width: 100%;
 }
-.index .product-container .product button,
-.index .mobile-container .product button,
-.index .product-container .mobile-support button,
-.index .mobile-container .mobile-support button {
+@media (min-width: 500px) {
+  .index .product img,
+  .index .mobile-support img {
+    display: flex;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .index .product img,
+  .index .mobile-support img {
+    margin: 0;
+    width: auto;
+  }
+}
+.index .product .product-blurb-container,
+.index .mobile-support .product-blurb-container,
+.index .product .mobile-blurb-container,
+.index .mobile-support .mobile-blurb-container {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.index .product .product-blurb-container button,
+.index .mobile-support .product-blurb-container button,
+.index .product .mobile-blurb-container button,
+.index .mobile-support .mobile-blurb-container button {
   background: none;
   border: 1px solid white;
   border-radius: 20px;
   padding: 10px 20px;
   border-color: black;
 }
-.index .product-container .product button:hover,
-.index .mobile-container .product button:hover,
-.index .product-container .mobile-support button:hover,
-.index .mobile-container .mobile-support button:hover {
+.index .product .product-blurb-container button:hover,
+.index .mobile-support .product-blurb-container button:hover,
+.index .product .mobile-blurb-container button:hover,
+.index .mobile-support .mobile-blurb-container button:hover {
   cursor: pointer;
   animation: button-hover 2s forwards;
 }
-.index .product-container .mobile-support,
-.index .mobile-container .mobile-support {
-  flex-direction: row-reverse;
-  text-align: right;
+@media (min-width: 800px) {
+  .index .mobile-support {
+    flex-direction: row-reverse;
+  }
 }
 .index .testimonials {
   display: flex;
@@ -463,8 +503,7 @@ footer .footer-boxes a {
   background: #000000;
 }
 .index .testimonials div {
-  width: 40%;
-  height: 600px;
+  width: 100%;
   background-size: cover;
   margin: 30px 0;
   border-radius: 10px;
@@ -473,31 +512,28 @@ footer .footer-boxes a {
   background: rgba(0, 0, 0, 0.75);
   font-size: 3rem;
   color: white;
-  margin: 0 5%;
+  margin: 90% 5% 10% 5%;
 }
 .index .testimonials div:nth-child(1) {
   background-image: url("../images/testimonial1.jpg");
 }
-.index .testimonials div:nth-child(1) p {
-  margin-top: 90%;
-}
 .index .testimonials div:nth-child(2) {
   background-image: url("../images/testimonial2.jpg");
 }
-.index .testimonials div:nth-child(2) p {
-  margin-top: 90%;
-}
 .index .testimonials div:nth-child(3) {
   background-image: url("../images/testimonial3.jpg");
-}
-.index .testimonials div:nth-child(3) p {
-  margin-top: 90%;
 }
 .index .testimonials div:nth-child(4) {
   background-image: url("../images/testimonial4.jpg");
 }
 .index .testimonials div:nth-child(4) p {
   margin-top: 10%;
+  margin-bottom: 90%;
+}
+@media (min-width: 800px) {
+  .index .testimonials div {
+    width: 40%;
+  }
 }
 .index .news-container {
   display: flex;
@@ -505,17 +541,21 @@ footer .footer-boxes a {
   justify-content: space-around;
   align-items: center;
   background: #282828;
-  height: 250px;
   color: white;
 }
 .index .news-container .news-box {
   padding: 2%;
-  width: 45%;
-  height: 55%;
+  margin: 10px 0;
+  width: 95%;
   background: #220ba1;
 }
 .index .news-container .news-box p:hover {
   cursor: pointer;
+}
+@media (min-width: 800px) {
+  .index .news-container .news-box {
+    width: 45%;
+  }
 }
 .about {
   margin: 0 auto;
@@ -562,7 +602,7 @@ footer .footer-boxes a {
   .about .intro {
     background-size: cover;
     height: 500px;
-    background-image: linear-gradient(white, black), url("../images/room-3m9132_mMSQ-unsplash.jpg");
+    background-image: linear-gradient(white, black), url("../images/about-header.jpg");
     background-color: #000000;
     background-blend-mode: screen;
     margin: 0px;
@@ -586,7 +626,7 @@ footer .footer-boxes a {
   margin-bottom: 30px;
   width: 100%;
 }
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   .about .company {
     display: flex;
     flex-direction: row;
