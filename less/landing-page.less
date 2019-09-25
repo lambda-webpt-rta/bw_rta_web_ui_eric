@@ -1,82 +1,93 @@
-#top-section {
-    background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 0%, 
-    rgba(18, 3, 5, 0.5) 72%, rgba(85, 65, 65, 0.8) 98%),
-    url('../images/cover-pic.jpg');
-    width: 100%;
-    height: 800px;
-    margin-top: 0;
-    background-size: cover;
+.index {
 
-    .top-container {
-        padding: 100px;
-        padding-left: 500px;
-        height: 100px;
-        width: 100%;
-        box-sizing: border-box;
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media @tablet {   
+                    height: 500px;
+                    background-size: cover;
+                    background-image: url("../images/index-header.jpg");
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            @media @tablet {
+                color: white;
+                width: 50%;
+            }
+
+            p {
+                margin: 30px 0;
+            }
+
+            button {
+                .index-buttons;
+                font-weight: bold;
+
+                @media @tablet {
+                    color: white;
+                }
+            }
+        }
+
     }
 
-    p {
-        color: @nav-bg;
-        font-size: 60px;
-        font-weight: bold;
-    }
+    .innovation-container {
+        display: flex;
+        align-items: center;
 
-    h1 {
-        color: @font-color;
-        font-size: 75px;
-        font-weight: bold;
-    }
+        @media @tablet {   
+            height: 400px;
+            background-size: cover;
+            background-image: url("../images/innovation.jpg");
+        }
 
-    button {
-        .signUp(block, @nav-bg, 200px, 45px, 2rem, 20px, center);
-         border: 4px solid black;
+        .innovation {
+            @media @tablet {
+                margin-left: 7%;
+                color: white;
+                width: 50%;
+            }
 
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
+            p {
+                margin: 30px 0;
+            }
 
-            &:hover {
-                background: black;
-                color: @nav-bg;
+            button {
+                .index-buttons;
+
+                @media @tablet {
+                    color: white;
+                }
             }
         }
     }
-    
-}
 
-//FEATURES
-
-#feature-section {
-    width: 100%;
-    height: 800px;
-
-    h2 {
-        font-size: 100px;
-        font-weight: bold;
-        margin: 20px;
-        padding: 30px;
-        padding-left: 500px;
-        border-bottom: 3px solid black;
-    }
-
-    
-
-    .features {
+    .product-container {
         display: flex;
-        justify-content: space-evenly;
-    }
+        align-items: center;
+        justify-content: center;
+        background-color: lightskyblue;
+        height: 500px;
 
-    .featurettes {
-        margin: 50px;
-        background-color: @nav-bg;
-        width: 100%;
-        height: auto;
-        box-shadow: 0 10px 6px -6px black;
-        
-        p {
-            font-size: 25px;
-            padding: 20px;
+        .product {
+            @media @tablet {
+                width: 50%;
+
+            }
+
+            img {
+                width: 25%;
+
+            }
         }
+        
     }
 }

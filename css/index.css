@@ -1,3 +1,21 @@
+@keyframes button-hover {
+  from {
+    background: rgba(255, 255, 255, 0);
+  }
+  to {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+.index-buttons {
+  background: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.index-buttons:hover {
+  cursor: pointer;
+  animation: button-hover 2s forwards;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -132,12 +150,44 @@ table {
 html {
   font-size: 62.5%;
 }
-.about-nav {
+body {
+  background-image: radial-gradient(lightblue, lightyellow, grey);
+}
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: white;
+}
+@media (min-width: 500px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (min-width: 500px) and (min-width: 800px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+p,
+button {
+  font-size: 2rem;
+}
+.nav-container {
   border-bottom: 4px solid #000000;
   display: flex;
   justify-content: space-around;
 }
-.about-nav header {
+.nav-container div {
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -146,49 +196,49 @@ html {
   width: 100%;
 }
 @media (min-width: 500px) {
-  .about-nav header {
+  .nav-container div {
     max-width: 800px;
   }
 }
 @media (min-width: 500px) and (min-width: 800px) {
-  .about-nav header {
+  .nav-container div {
     max-width: 1024px;
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.about-nav header h1 {
+.nav-container div h1 {
   margin: 10px 0 10px 0;
   text-align: center;
   font-size: 4rem;
 }
 @media (min-width: 800px) {
-  .about-nav header h1 {
+  .nav-container div h1 {
     width: 50%;
     text-align: left;
   }
 }
-.about-nav header nav {
+.nav-container div nav {
   width: 100%;
 }
 @media (min-width: 800px) {
-  .about-nav header nav {
+  .nav-container div nav {
     width: 50%;
   }
 }
-.about-nav header ul {
+.nav-container div ul {
   display: flex;
   flex-direction: column;
   align-items: space-around;
   margin: 0 auto;
   width: 100%;
 }
-.about-nav header ul li {
+.nav-container div ul li {
   margin: 10px 0 10px 0;
   text-align: center;
 }
 @media (min-width: 500px) {
-  .about-nav header ul {
+  .nav-container div ul {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
@@ -196,11 +246,11 @@ html {
   }
 }
 @media (min-width: 500px) and (min-width: 800px) {
-  .about-nav header ul {
+  .nav-container div ul {
     justify-content: space-between;
   }
 }
-.about-nav header a {
+.nav-container div a {
   font-size: 3rem;
   text-decoration: none;
   color: black;
@@ -250,9 +300,11 @@ footer .footer-boxes div {
   }
 }
 footer .footer-boxes img {
-  background-color: white;
   width: 15%;
   margin: 0 5% 0 5%;
+}
+footer .footer-boxes img:nth-of-type(1) {
+  background-color: white;
 }
 footer .footer-boxes address,
 footer .footer-boxes p {
@@ -268,78 +320,100 @@ footer .footer-boxes a {
     color: white;
   }
 }
-#top-section {
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 0%, rgba(18, 3, 5, 0.5) 72%, rgba(85, 65, 65, 0.8) 98%), url('../images/cover-pic.jpg');
-  width: 100%;
-  height: 800px;
-  margin-top: 0;
-  background-size: cover;
-}
-#top-section .top-container {
-  padding: 100px;
-  padding-left: 500px;
-  height: 100px;
-  width: 100%;
-  box-sizing: border-box;
-}
-#top-section p {
-  color: lightgrey;
-  font-size: 60px;
-  font-weight: bold;
-}
-#top-section h1 {
-  color: #000;
-  font-size: 75px;
-  font-weight: bold;
-}
-#top-section button {
-  display: block;
-  background-color: lightgrey;
-  width: 200px;
-  height: 45px;
-  font-size: 2rem;
-  border-radius: 20px;
-  text-align: center;
-  border: 4px solid black;
-}
-#top-section button a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-}
-#top-section button a:hover {
-  background: black;
-  color: lightgrey;
-}
-#feature-section {
-  width: 100%;
-  height: 800px;
-}
-#feature-section h2 {
-  font-size: 100px;
-  font-weight: bold;
-  margin: 20px;
-  padding: 30px;
-  padding-left: 500px;
-  border-bottom: 3px solid black;
-}
-#feature-section .features {
+.index .header-container {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
 }
-#feature-section .featurettes {
-  margin: 50px;
-  background-color: lightgrey;
+@media (min-width: 500px) {
+  .index .header-container {
+    height: 500px;
+    background-size: cover;
+    background-image: url("../images/index-header.jpg");
+  }
+}
+.index .header-container header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: auto;
-  box-shadow: 0 10px 6px -6px black;
 }
-#feature-section .featurettes p {
-  font-size: 25px;
-  padding: 20px;
+@media (min-width: 500px) {
+  .index .header-container header {
+    color: white;
+    width: 50%;
+  }
 }
-body {
-  background-image: radial-gradient(lightblue, lightyellow, grey);
+.index .header-container header p {
+  margin: 30px 0;
+}
+.index .header-container header button {
+  background: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.index .header-container header button:hover {
+  cursor: pointer;
+  animation: button-hover 2s forwards;
+}
+@media (min-width: 500px) {
+  .index .header-container header button {
+    color: white;
+  }
+}
+.index .innovation-container {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  .index .innovation-container {
+    height: 400px;
+    background-size: cover;
+    background-image: url("../images/innovation.jpg");
+  }
+}
+@media (min-width: 500px) {
+  .index .innovation-container .innovation {
+    margin-left: 7%;
+    color: white;
+    width: 50%;
+  }
+}
+.index .innovation-container .innovation p {
+  margin: 30px 0;
+}
+.index .innovation-container .innovation button {
+  background: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.index .innovation-container .innovation button:hover {
+  cursor: pointer;
+  animation: button-hover 2s forwards;
+}
+@media (min-width: 500px) {
+  .index .innovation-container .innovation button {
+    color: white;
+  }
+}
+.index .product-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightskyblue;
+  height: 500px;
+}
+@media (min-width: 500px) {
+  .index .product-container .product {
+    width: 50%;
+  }
+}
+.index .product-container .product img {
+  width: 25%;
 }
 .about {
   margin: 0 auto;
@@ -357,17 +431,7 @@ body {
     max-width: 1024px;
   }
 }
-.about h1,
-.about h2,
-.about h3 {
-  text-align: center;
-  font-weight: bold;
-}
-.about h1 {
-  font-size: 4rem;
-}
 .about h2 {
-  font-size: 3.5rem;
   padding: 5px 0 5px 0;
   margin: 10px 0 10px 0;
   border-top: 1px dotted black;
@@ -385,6 +449,11 @@ body {
 .about .intro {
   margin: 0 0 10px 0;
 }
+.about .intro h1 {
+  padding-top: 25px;
+  color: black;
+  font-weight: bold;
+}
 @media (min-width: 500px) {
   .about .intro {
     background-size: cover;
@@ -393,10 +462,6 @@ body {
     background-color: #000000;
     background-blend-mode: screen;
     margin: 0px;
-  }
-  .about .intro h1 {
-    color: black;
-    font-weight: bold;
   }
   .about .intro p {
     color: black;
@@ -407,11 +472,15 @@ body {
   }
 }
 .about .company {
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 0;
   background: white;
 }
 .about .company img {
   margin: 15px 0 15px 0;
+}
+.about .company h2 {
+  margin-bottom: 30px;
+  width: 100%;
 }
 @media (min-width: 500px) {
   .about .company {
@@ -419,9 +488,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  .about .company h2 {
-    width: 100%;
   }
   .about .company img {
     width: 48%;
@@ -433,6 +499,10 @@ body {
 .about .profiles {
   display: flex;
   flex-direction: column;
+}
+.about .profiles h2 {
+  margin-bottom: 30px;
+  width: 100%;
 }
 @media (min-width: 800px) {
   .about .profiles .roles {

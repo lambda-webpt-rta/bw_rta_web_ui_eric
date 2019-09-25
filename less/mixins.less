@@ -1,9 +1,16 @@
-.signUp (@display, @backgroundColor, @width, @height, @fontSize, @borderRadius, @textAlign) {
-    display: @display;
-    background-color: @backgroundColor;
-    width: @width;
-    height: @height;
-    font-size: @fontSize;
-    border-radius: @borderRadius;
-    text-align: @textAlign;
+@keyframes button-hover {
+    from { background: rgba(255, 255, 255, 0);}
+    to { background: rgba(255, 255, 255, .25);}
+}
+
+.index-buttons {
+    background: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    &:hover {
+        cursor: pointer;
+        animation: button-hover 2s forwards;
+    }
 }
