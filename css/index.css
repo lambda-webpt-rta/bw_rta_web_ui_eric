@@ -330,7 +330,7 @@ footer .footer-boxes a {
   align-items: center;
   justify-content: center;
   background: grey;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 @media (min-width: 500px) {
   .index .header-container {
@@ -694,6 +694,27 @@ footer .footer-boxes a {
   .about .profiles .individual .blurb {
     width: 50%;
     margin: auto 0;
+    background: lightgrey;
+  }
+  .about .profiles .individual .blurb .name {
+    display: flex;
+    justify-content: space-around;
+    background: darkgrey;
+  }
+  .about .profiles .individual .blurb .name div {
+    width: 40px;
+  }
+  .about .profiles .individual .blurb .name a {
+    display: block;
+    width: 40px;
+    background-image: url("../images/github.png");
+    background-size: 40px;
+    background-origin: padding-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
   }
   .about .profiles .individual .blurb p {
     padding: 10px 4% 10px 4%;
@@ -705,17 +726,6 @@ footer .footer-boxes a {
   }
   .about .profiles .individual .blurb {
     width: 33%;
-  }
-}
-.about .profiles .blurb {
-  background: lightgrey;
-}
-.about .profiles .blurb h3 {
-  background: darkgrey;
-}
-@media (min-width: 800px) {
-  .about .profiles .blurb h3 {
-    color: black;
   }
 }
 .about .profiles h3 {
