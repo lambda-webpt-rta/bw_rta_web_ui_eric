@@ -97,15 +97,13 @@
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
+            //align-items: center;
+            //justify-content: center;
             
 
             @media @desktop {
                 flex-direction: row;
                 flex-wrap: nowrap;
-
-
             }
         }
 
@@ -118,7 +116,7 @@
 
                 @media @desktop {
                     margin: 0;
-                    width: auto;
+                    width: 50%;
                 }
             }
 
@@ -133,6 +131,10 @@
             align-items: center;
             justify-content: center;
             width: 100%;
+
+            @media @desktop {
+                width: 50%;
+            }
 
             button {
                 .index-buttons;
